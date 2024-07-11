@@ -33,6 +33,7 @@ export default async function handler(req, res) {
             }
         });
 
+        // Return the response from the Groq API
         res.status(200).json(response.data);
     } catch (error) {
         res.status(error.response?.status || 500).json({
